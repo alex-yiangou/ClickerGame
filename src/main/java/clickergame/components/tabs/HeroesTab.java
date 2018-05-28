@@ -6,6 +6,7 @@ package clickergame.components.tabs;
  */
 
 import javafx.scene.control.Tab;
+import clickergame.enums.TopMenuTabsEnum;
 
 public class HeroesTab extends Tab {
 
@@ -14,8 +15,8 @@ public class HeroesTab extends Tab {
     }
 
     public Tab renderHeroesTab() {
-        this.setId("heroes-tab");
-        this.setText("Heroes");
+        this.setId(TopMenuTabsEnum.HEROES.getTabId());
+        this.setText(TopMenuTabsEnum.HEROES.getTabLabel());
         this.setClosable(false);
         return this;
     }
