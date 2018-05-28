@@ -6,6 +6,7 @@ package clickergame.components.tabs;
  */
 
 import javafx.scene.control.Tab;
+import clickergame.enums.TopMenuTabsEnum;
 
 public class UpgradesTab extends Tab {
 
@@ -14,8 +15,8 @@ public class UpgradesTab extends Tab {
     }
 
     public Tab renderUpgradesTab() {
-        this.setId("upgrades-tab");
-        this.setText("Upgrades");
+        this.setId(TopMenuTabsEnum.UPGRADES.getTabId());
+        this.setText(TopMenuTabsEnum.UPGRADES.getTabLabel());
         this.setClosable(false);
         return this;
     }

@@ -6,6 +6,7 @@ package clickergame.components.tabs;
  */
 
 import javafx.scene.control.Tab;
+import clickergame.enums.TopMenuTabsEnum;
 
 public class AchievementsTab extends Tab {
 
@@ -14,8 +15,8 @@ public class AchievementsTab extends Tab {
     }
 
     public Tab renderAchievementsTab() {
-        this.setId("achievements-tab");
-        this.setText("Achievements");
+        this.setId(TopMenuTabsEnum.ACHIEVEMENTS.getTabId());
+        this.setText(TopMenuTabsEnum.ACHIEVEMENTS.getTabLabel());
         this.setClosable(false);
         return this;
     }
