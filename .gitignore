@@ -1,0 +1,11 @@
+
+#Gradle Related
+/.gradle
+/build
+
+#Java Related
+/bin
+
+#General
+/.vscode
+/.settings
