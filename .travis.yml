@@ -1,0 +1,12 @@
+language: java
+
+
+branches: 
+  only:
+    - master
+
+install:
+  - ./gradlew assemble
+
+script: 
+  - ./gradlew check
