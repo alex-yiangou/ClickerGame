@@ -12,21 +12,25 @@ import java.util.ArrayList;
 
 import clickergame.components.listcells.HeroesListCell;
 import clickergame.enums.HeroesListEnum;
+import clickergame.models.Hero;
 import javafx.collections.ObservableList;
 import javafx.collections.FXCollections;
 
-public class HeroesListContainer extends ListView<String> implements EventHandler<Event> {
+public class HeroesListContainer extends ListView<Hero> implements EventHandler<Event> {
     public HeroesListContainer() {
         renderHeroesListContainer();
     }
 
-    public ListView<String> renderHeroesListContainer() {
-        ArrayList<String> heroesList = new ArrayList<>();
-        ObservableList<String> heroesData = FXCollections.observableArrayList();
-        
+    public ListView<Hero> renderHeroesListContainer() {
+        ArrayList<Hero> heroesList = new ArrayList<>();
+        ObservableList<Hero> heroesData = FXCollections.observableArrayList();
         // TODO These data needs to be fetched from the database for each specific player.
+        
         for (int i = 0; i < HeroesListEnum.values().length; i++) {
-            heroesList.add(i, HeroesListEnum.values()[i].getHeroName());
+            //TODO Shorten this line here
+            Hero hero = new Hero(HeroesListEnum.values()[i].getHeroId(),
+                HeroesListEnum.values()[i].getHeroName(), HeroesListEnum.values()[i].getHeroInitialDamage());
+            heroesList.add(i, hero);
             heroesData.add(heroesList.get(i));
         }
 
@@ -47,6 +51,6 @@ public class HeroesListContainer extends ListView<String> implements EventHandle
     }
 
     public void handle(Event event) {
-        System.out.println(this.getSelectionModel().getSelectedItem() + " clicked" );
+        System.out.println(this.getSelectionModel().getSelectedItem().getHeroName() + " clicked" );
     }
 }

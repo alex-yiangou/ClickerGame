@@ -31,6 +31,10 @@ public enum HeroesListEnum {
         heroInitDmg = initDmg;
     }
 
+    public String getHeroId() {
+        return heroId;
+    }
+
     public String getHeroName() {
         return heroName;
     }
