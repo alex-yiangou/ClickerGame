@@ -15,7 +15,7 @@ public class Launcher extends Application {
     public LauncherContainer container;
 
     public String getGreeting() {
-        return "Hello world.";
+        return null;
     }
 
     // TODO Initialise all the components and containers that are used in the launcher here
