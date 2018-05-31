@@ -13,9 +13,7 @@ public class PlayAreaContainer extends BorderPane {
     }
 
     private BorderPane renderPlayAreaContainer() {
-        //TODO Create a GridPane to hold the 3 following components
         this.setCenter(new CenterPlayAreaContainer());
-        //TODO Move the 3 following components in their own java files
         return this;
     }
 }

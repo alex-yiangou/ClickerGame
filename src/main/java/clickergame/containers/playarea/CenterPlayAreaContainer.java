@@ -10,6 +10,7 @@ import clickergame.components.labels.MonsterHealthLabel;
 import clickergame.components.labels.MonsterNameLabel;
 import javafx.geometry.Pos;
 import javafx.scene.layout.GridPane;
+import clickergame.components.buttons.ClickMeButton;
 
 public class CenterPlayAreaContainer extends GridPane {
     public CenterPlayAreaContainer() {
@@ -17,10 +18,10 @@ public class CenterPlayAreaContainer extends GridPane {
     }
 
     public GridPane renderCenterPlayAreaContainer() {
-        //TODO Render monster health label
         this.add(new MonsterNameLabel(), 0, 0);
         this.add(new MonsterHealthLabel(), 0, 1);
-        this.add(new ExitButton(), 0, 2);
+        this.add(new ClickMeButton(), 0, 2);
+        this.add(new ExitButton(), 1, 2);
         this.setAlignment(Pos.CENTER);
         return this;
     }
