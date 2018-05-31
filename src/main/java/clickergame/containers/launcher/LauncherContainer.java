@@ -7,6 +7,7 @@ package clickergame.containers.launcher;
 
 import javafx.scene.layout.BorderPane;
 import clickergame.containers.heroeslist.HeroesListContainer;
+import clickergame.containers.playarea.PlayAreaContainer;
 import clickergame.containers.topmenutabs.TopMenuTabsContainer;
 
 public class LauncherContainer extends BorderPane {
@@ -19,6 +20,7 @@ public class LauncherContainer extends BorderPane {
         this.setTop(new TopMenuTabsContainer());
         //TODO With each selected top menu tab, show according list
         this.setLeft(new HeroesListContainer());
+        this.setCenter(new PlayAreaContainer());
         return this;
     }
 }
