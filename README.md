@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/alex-yiangou/ClickerGame.svg?branch=master)](https://travis-ci.org/alex-yiangou/ClickerGame)
+
 # Clicker Game
 
 ## How to install.
