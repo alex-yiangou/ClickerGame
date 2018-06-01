@@ -5,6 +5,7 @@ package clickergame.components.labels;
  * @version     v0.0.0
  */
 
+import clickergame.models.Monster;
 import javafx.scene.control.Label;
 
 public class MonsterHealthLabel extends Label {
@@ -14,7 +15,7 @@ public class MonsterHealthLabel extends Label {
     }
 
     public Label renderMonsterHealthLabel() {
-        this.setText("10/10");
+        this.setText(String.valueOf(new Monster().getMonsterHealth()));
         return this;
     }
 }
