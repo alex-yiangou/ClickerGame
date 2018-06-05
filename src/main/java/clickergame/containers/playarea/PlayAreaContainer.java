@@ -8,12 +8,19 @@ package clickergame.containers.playarea;
 import javafx.scene.layout.BorderPane;
 
 public class PlayAreaContainer extends BorderPane {
+
+    CenterPlayAreaContainer centerPlayAreaContainer = new CenterPlayAreaContainer();
+
     public PlayAreaContainer() {
         renderPlayAreaContainer();
     }
 
     private BorderPane renderPlayAreaContainer() {
-        this.setCenter(new CenterPlayAreaContainer());
+        this.setCenter(centerPlayAreaContainer);
         return this;
+    }
+
+    public CenterPlayAreaContainer getCenterPlayAreaContainer() {
+        return centerPlayAreaContainer;
     }
 }

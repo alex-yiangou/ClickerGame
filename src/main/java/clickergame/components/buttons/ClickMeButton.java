@@ -6,16 +6,27 @@ package clickergame.components.buttons;
  */
 
 import javafx.scene.control.Button;
+import clickergame.containers.playarea.CenterPlayAreaContainer;
+import clickergame.models.Monster;
+import javafx.event.Event;
+import javafx.event.EventHandler;
 
-public class ClickMeButton extends Button {
+public class ClickMeButton extends Button implements EventHandler<Event> {
+
+    Monster monster = new Monster();
+    double initialHp = monster.getMonsterHealth();
+
     public ClickMeButton() {
         renderClickMeButton();
     }
 
     public Button renderClickMeButton() {
+        this.setId("click-me-btn");
         this.setText("Click Me");
-        // TODO Functionality missing
-        this.setOnAction((event) -> System.exit(0));
         return this;
+    }
+
+    public void handle(Event event) {   
+        CenterPlayAreaContainer.getMonsterHealthLabel().setText(String.valueOf(initialHp--));
     }
 }
